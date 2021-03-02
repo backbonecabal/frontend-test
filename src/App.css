@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;1,700&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  --theme-blue-dark: #0e1731;
+  --theme-blue-dark-active: #1f2f63;
+  --theme-blue: #343f65;
+  --theme-gray: #f7f8fc;
+  --theme-black: rgb(100, 100, 100);
+  --theme-black-darker: rgb(70, 70, 70);
+  --default-border-gray: rgba(0, 0, 0, 0.1);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: 'Inter', sans-serif !important;
+}
+
+body {
+  background: var(--theme-blue-dark) !important;
+}
+
+.initializing {
+  color: var(--theme-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-size: 2rem;
+}
+
+.pre {
+  white-space: pre-wrap;
+  overflow-x: auto;
+  word-wrap: break-word;
+}
+
+.App {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4d5872;
+}
+
+.main-card {
+  display: flex;
+  align-items: center;
+  min-height: 40rem;
+  width: 62rem;
+}
+
+.main-card-left {
+  min-height: 40rem;
+  background: #343f65;
+  color: var(--theme-gray);
+  width: 27rem;
+  padding: 2rem 2rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.account-import {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-card-left > .loading-bls {
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-card-left > .QRCodeContainer {
+  width: 100%;
+  padding: 2rem 0;
+  margin: 2rem 0 2rem 0;
+  background: var(--theme-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.main-card-left > .app-title {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 600;
+  opacity: 0.8;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-card-left > .dropdown-container {
+  margin: auto;
+}
+
+.main-card-left > .dropdown-container > .dropdown-container-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-card-left > .dropdown-container > .dropdown-container-title > h4 {
+  font-weight: 300;
+  opacity: 0.7;
+}
+
+.main-card-left > .dropdown-container > .dropdown-container-title > .show-keys {
+  cursor: pointer;
+  color: yellow;
+  opacity: 0.7;
+}
+
+.main-card-right {
+  width: 35rem;
+  min-height: 20rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background: var(--theme-gray);
+}
+
+.main-card-right > .tabs {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid var(--default-border-gray);
+}
+
+.main-card-right > .tabs > .tab {
+  font-weight: 200;
+  font-size: 90%;
+  padding: 1rem 3rem;
+  text-align: center;
+  width: 100%;
+}
+
+.main-card-right > .tabs > .active {
+  border-bottom: 3px solid var(--theme-blue);
+  font-weight: 600;
+}
+
+.main-card-right > .header {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--default-border-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-card-right > .header > .account-details > h4 {
+  font-weight: 600;
+}
+
+.main-card-right > .header > .account-details > p {
+  font-weight: 300;
+  margin: 0;
+  padding: 0.2rem 0;
+  color: #424242;
+  font-size: 90%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  max-width: 25rem;
+}
+
+.main-card-right > .header > .account-details > h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.main-card-right > .balance {
+  padding: 2rem 2rem;
+  font-family: "'Inter', sans-serif";
+  min-height: 25rem;
+  /* overflow-y: scroll; */
+}
+
+.main-card-right > .transactions {
+  padding: 2rem 2rem;
+  height: 30rem;
+  overflow-y: scroll;
+}
+
+.main-card-right > .transactions > .records {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem 0;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.main-card-right > .transactions > .records > .id {
+  max-width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.main-card-right > .transactions > .records > .hash {
+  overflow: hidden;
+  font-size: 0.8rem;
+  text-overflow: ellipsis;
+}
+
+.main-card-right > .transactions > .records > .date {
+  overflow: hidden;
+  font-size: 0.8rem;
+  text-overflow: ellipsis;
+}
+
+.main-card-right > .transactions > .records > .amount {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.main-card-right > .balance > h5 {
+  margin: 0;
+}
+
+.main-card-right > .balance > .amount {
+  display: flex;
+  color: #555555;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-card-right > .balance > .amount > .value {
+  font-size: 4.3rem;
+  line-height: 5rem;
+  font-weight: 200;
+}
+
+.main-card-right > .balance > .deposit-form {
+  padding-top: 3rem;
+}
+
+.main-card-right > .balance > .deposit-form > h4 {
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.main-card-right > .balance > .balance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.main-card-right > .balance > .balance-header > span {
+  font-weight: 600;
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
+.main-card-right > .balance > .balance-header > .balance-toggle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-card-right > .balance > .balance-header > .balance-toggle > span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;s
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #fff;
+  background-image: none;
+}
+select::-ms-expand {
+  display: none;
+}
+.select {
+  font-family: 'Cousine', monospace;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 2.7rem;
+  line-height: 2.5;
+  font-size: 90%;
+  font-weight: 200;
+  background: var(--theme-gray);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 0.25em;
+}
+select {
+  flex: 1;
+  padding: 0.2rem 1rem;
+  color: rgb(85, 85, 85);
+  cursor: pointer;
+}
+
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dropdown-box {
+  min-width: 0 !important;
+  width: 8rem !important;
+}
+
+.button-group {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: space-between;
+}
+
+.custom-button {
+  font-size: 0.8rem !important;
+  font-weight: 200 !important;
+  padding: 0.9rem 1rem !important;
+  color: white !important;
+  background: var(--theme-blue-dark) !important;
+}
+
+.custom-button:active {
+  background: var(--theme-blue-dark-active) !important;
+}
+
+.form-button {
+  margin-top: 1rem !important;
+}
+
+.burn {
+  background: #ee6969 !important;
+  color: #0e1731 !important;
+}
+
+.burn:active {
+  background: #b95050 !important;
+}
+
+.new {
+  background: #a6eca8 !important;
+  color: #0e1731 !important;
+}
+
+.new:active {
+  background: #5a8f5c !important;
+}
+
+.modal-content-center {
+  text-align: center;
+}
+
+.toggle-container {
+  margin-top: 0.5rem;
+  padding: 0.8rem 0;
+}
+
+.toggle-mode > label {
+  color: white !important;
+  font-weight: bold;
+}
+
+/* ################### MOBILE STYLE OVERRIDES ################### */
+@media (max-width: 500px) {
+  .main-card {
+    min-height: 100vh;
+    width: 100vw;
+    border-radius: 0;
+    flex-direction: column;
+    background: var(--theme-blue);
+  }
+
+  .main-card-left {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    position: fixed;
+  }
+
+  .main-card-right {
+    margin-top: 84vh;
+    width: 100%;
+    min-height: 90vh;
+    z-index: 500;
+    border-radius: 2rem 2rem 0 0;
+  }
+
+  .main-card-right > .header {
+    padding: 1.2rem 2rem;
+  }
+
+  .main-card-left > .QRCodeContainer {
+    max-height: 350px;
+    margin: 2rem 0 2rem 0;
+  }
+
+  .select {
+    width: 100%;
+  }
+
+  .custom-button {
+    font-size: 0.9rem !important;
+    padding: 1rem 0.5rem !important;
+  }
+
+  .main-card-right > .balance {
+    min-height: 40rem;
+    overflow-y: hidden;
+  }
+
+  .main-card-right > .transactions {
+    max-height: none;
+    min-height: 50rem;
+    overflow-y: hidden;
+  }
+
+  .main-card-right > .balance > .amount {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-card-right > .balance > .amount > .value {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+  }
+}
